@@ -188,3 +188,4 @@ def del_course(course_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Course not found")
     crud.removecourse(db, Course_id=course_id)
     return db_course
+

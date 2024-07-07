@@ -55,48 +55,48 @@ def update_student(db: Session, student_id: str, student: models.Student):
         return db_student
 
 
-#Professor tabale
+#ostad tabale
 
-def get_professor(db: Session, Professor_id: int):
-    return db.query(models.Professor).filter(models.Professor.lid == Professor_id).first()
+def get_ostad(db: Session, ostad_id: int):
+    return db.query(models.ostad).filter(models.ostad.lid == ostad_id).first()
 
-def create_professoe(db: Session, professor: schemas.Professor):
-    db_professor = models.Professor(
-        lid=professor.lid ,
-        fname=professor.fname,
-        lname=professor.lname,
-        id=professor.id,
-        department=professor.department,
-        major=professor.major,
-        birth=professor.birth,
-        borncity=professor.borncity,
-        address=professor.address,
-        postalcode=professor.postalcode,
-        cphone=professor.cphone,
-        hphone=professor.hphone,
-        lcourseids=professor.lcourseids,
+def create_professoe(db: Session, ostad: schemas.ostad):
+    db_ostad = models.ostad(
+        lid=ostad.lid ,
+        fname=ostad.fname,
+        lname=ostad.lname,
+        id=ostad.id,
+        department=ostad.department,
+        major=ostad.major,
+        birth=ostad.birth,
+        borncity=ostad.borncity,
+        address=ostad.address,
+        postalcode=ostad.postalcode,
+        cphone=ostad.cphone,
+        hphone=ostad.hphone,
+        lcourseids=ostad.lcourseids,
     )            
-    db.add(db_professor)
+    db.add(db_ostad)
     db.commit()
-    db.refresh(db_professor)
-    return db_professor
+    db.refresh(db_ostad)
+    return db_ostad
 
 
-def update_prefessor(db: Session, prefessor_id: str, prefessor: models.Professor):
-    db_prefessor = db.query(models.Professor).filter(models.Professor.lid == prefessor_id).first()
-    if db_prefessor is None:
-        return db_prefessor
+def update_ostad(db: Session, ostad_id: str, ostad: models.ostad):
+    db_ostad = db.query(models.ostad).filter(models.ostad.lid == ostad_id).first()
+    if db_ostad is None:
+        return db_ostad
     else:
-        for key, value in prefessor.dict().items():
-            setattr(db_prefessor, key, value)
+        for key, value in ostad.dict().items():
+            setattr(db_ostad, key, value)
         db.commit()
-        db.refresh(db_prefessor)
-        return db_prefessor
+        db.refresh(db_ostad)
+        return db_ostad
 
 
-def removeprefessor(db: Session , Professor_id: int):
-    db_professor = db.query(models.Professor).filter(models.Professor.lid == Professor_id).first()
-    db.delete(db_professor)
+def removeostad(db: Session , ostad_id: int):
+    db_ostad = db.query(models.ostad).filter(models.ostad.lid == ostad_id).first()
+    db.delete(db_ostad)
     db.commit()
 
 
@@ -119,8 +119,8 @@ def create_cource(db: Session, course: schemas.Course):
 
 
 
-def update_course(db: Session, course_id: str, course: models.Course):
-    db_course = db.query(models.Course).filter(models.Course.cid == course_id).first()
+def update_course(db: Session, courseid: str, course: models.Course):
+    db_course = db.query(models.Course).filter(models.Course.cid == courseid).first()
     if db_course is None:
         return db_course
     else:
