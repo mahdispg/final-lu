@@ -28,10 +28,10 @@ class Student(Base):
     scourseids  = Column(String)
     lids  = Column(String)
 
-#Professor
+#ostad
 
-class Professor(Base):
-    __tablename__ = "Professor"
+class ostad(Base):
+    __tablename__ = "ostad"
     lid = Column(String , primary_key=True)
     fname = Column(String)
     lname = Column(String)
