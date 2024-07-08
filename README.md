@@ -64,7 +64,7 @@ from python=
 # فایل docker.py:
 
 
-
+<img src="https://github.com/mahdispg/final-lu/blob/main/PNG8.png?raw=true" />
  workdir
 پوشه ای که فایل های پروژه در ان وجود دارد
 
