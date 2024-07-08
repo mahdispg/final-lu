@@ -8,7 +8,7 @@ RUN pip install sqlalchemy
 RUN pip install pydantic
 RUN pip install python-multipart
 
-COPY . /app
+COPY . /project
 
 EXPOSE 8000
 
