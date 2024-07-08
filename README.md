@@ -26,7 +26,7 @@
 
 <img src="https://github.com/mahdispg/final-lu/blob/main/PNG4.png?raw=true" />
 <img src="https://github.com/mahdispg/final-lu/blob/main/PNG5.png?raw=true" />
-
+<img src="https://github.com/mahdispg/final-lu/blob/main/PNG6.png?raw=true" />
 
 بخش اول شامل ایمپورت‌های مورد نیاز برای تایپ‌ها، ریگولار اکسپرشن‌ها، مدیریت خطاها با FastAPI و استفاده از Pydantic برای تعریف مدل‌ها است.
 کلاس  Studentمدل مشخصات یک دانشجو را شامل می‌شود.
