@@ -1,15 +1,11 @@
-FROM python:3.9
+FROM python:3.12.3
 
-WORKDIR /app
+WORKDIR /fastapi
 
-RUN pip install fastapi
-RUN pip install uvicorn
-RUN pip install sqlalchemy
-RUN pip install pydantic
-RUN pip install python-multipart
+copy ./requirements.txt /fastapi
 
-COPY . /project
+RUN pip install -r requirements.txt
 
-EXPOSE 8000
+COPY . /fastapi
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+CMD ["fastapi", "run", "project/main.py"]
