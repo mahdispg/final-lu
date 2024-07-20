@@ -2,7 +2,7 @@ FROM python:3.12.3
 
 WORKDIR /fastapi
 
-copy ./requirements.txt /fastapi
+COPY ./requirements.txt /fastapi
 
 RUN pip install -r requirements.txt
 
